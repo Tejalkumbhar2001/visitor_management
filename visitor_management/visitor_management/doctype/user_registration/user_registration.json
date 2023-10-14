@@ -1,0 +1,206 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{email}",
+ "creation": "2023-10-09 12:47:12.426571",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "first_name",
+  "column_break_goyc1",
+  "last_name",
+  "column_break_khlsb",
+  "email",
+  "column_break_gvuln",
+  "mobile",
+  "section_break_n65mj",
+  "currency",
+  "column_break_d1mw3",
+  "country",
+  "section_break_g2xwi",
+  "column_break_raamh",
+  "company_nameas_per_your_gst",
+  "column_break_il6ux",
+  "gst",
+  "different",
+  "pan",
+  "section_break_v5wlz",
+  "password",
+  "column_break_hqeg0",
+  "confirm_password",
+  "amended_from",
+  "company_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Email",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "default": "+91-",
+   "fieldname": "mobile",
+   "fieldtype": "Phone",
+   "in_list_view": 1,
+   "label": "Mobile",
+   "reqd": 1
+  },
+  {
+   "fieldname": "company_nameas_per_your_gst",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Company Name(As per your GST))",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "depends_on": "eval:doc.different==0",
+   "fieldname": "gst",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "GST",
+   "length": 15,
+   "mandatory_depends_on": "eval:doc.different==0",
+   "unique": 1
+  },
+  {
+   "depends_on": "eval:doc.different ==1",
+   "fieldname": "pan",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "PAN",
+   "mandatory_depends_on": "eval:doc.different==1",
+   "unique": 1
+  },
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "label": "First Name"
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name"
+  },
+  {
+   "default": "india",
+   "fieldname": "country",
+   "fieldtype": "Data",
+   "label": "Country"
+  },
+  {
+   "default": "INR",
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "password",
+   "fieldtype": "Data",
+   "label": "Password"
+  },
+  {
+   "fieldname": "confirm_password",
+   "fieldtype": "Data",
+   "label": "Confirm Password"
+  },
+  {
+   "fieldname": "column_break_raamh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_goyc1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_khlsb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_gvuln",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_n65mj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_g2xwi",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_d1mw3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "different",
+   "fieldtype": "Check",
+   "label": "Your Company is not Registered ?"
+  },
+  {
+   "fieldname": "section_break_v5wlz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_hqeg0",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_il6ux",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "User Registration",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "company_name",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Company Name",
+   "options": "Company"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-10-13 10:44:11.984250",
+ "modified_by": "Administrator",
+ "module": "Visitor Management",
+ "name": "User Registration",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
